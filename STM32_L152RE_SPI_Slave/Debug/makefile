@@ -60,8 +60,8 @@ all: main-build
 main-build: STM32_L152RE_SPI_Slave.elf secondary-outputs
 
 # Tool invocations
-STM32_L152RE_SPI_Slave.elf STM32_L152RE_SPI_Slave.map: $(OBJS) $(USER_OBJS) C:\workarea\workspace_1.11.0\STM32_L152RE_SPI_Slave\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32_L152RE_SPI_Slave.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\workarea\workspace_1.11.0\STM32_L152RE_SPI_Slave\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32_L152RE_SPI_Slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM32_L152RE_SPI_Slave.elf STM32_L152RE_SPI_Slave.map: $(OBJS) $(USER_OBJS) C:\workspace_Ceilometer2023\STM32\STM32Ceilometer\STM32_L152RE_SPI_Slave\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM32_L152RE_SPI_Slave.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\workspace_Ceilometer2023\STM32\STM32Ceilometer\STM32_L152RE_SPI_Slave\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32_L152RE_SPI_Slave.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
